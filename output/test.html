@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- This file was created with the aha Ansi HTML Adapter. https://github.com/theZiz/aha -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="application/xml+xhtml; charset=UTF-8" />
+<title>output/test.log</title>
+</head>
+<body style="color:white; background-color:black">
+<pre>
+
+&gt; account-manager@1.0.0 test /Volumes/Dev/accounts/account-manager
+&gt; scripts/run_tests.sh all
+
+
+--------------------------------------------------------------------
+ Running all tests in &quot;test&quot; folder:
+--------------------------------------------------------------------
+
+
+  Core
+    DynamicClass loader
+      getInstance()
+      <span style="color:lime;">  ✓</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;"> should throw if requested class name is not found in store</span>
+
+  Core
+    Manager
+    <span style="color:lime;">  ✓</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;"> importAccount should index the new account</span>
+      getAccounts()
+      <span style="color:lime;">  ✓</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;"> should throw if no module is specified</span>
+      <span style="color:lime;">  ✓</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;"> should return an empty array if specified module exists but has no accounts</span>
+      getAccountsMap()
+      <span style="color:lime;">  ✓</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;"> should return a Map Object</span>
+      getClassMapper()
+      <span style="color:lime;">  ✓</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;"> should return a DynamicClassMapper Object</span>
+
+  Binance
+    import one Binance account
+    <span style="color:lime;">  ✓</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;"> wallet should have 1 account</span>
+    <span style="color:lime;">  ✓</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;"> should create first account with valid class</span>
+    <span style="color:lime;">  ✓</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;"> should create first account with valid class</span>
+    withdraw()
+    <span style="color:lime;">  ✓</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;"> should throw if account does not have specified currency</span><span style="color:red;"> (688ms)</span>
+    <span style="color:lime;">  ✓</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;"> should throw if currency does not exist</span><span style="color:red;"> (645ms)</span>
+    <span style="color:lime;">  ✓</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;"> should throw if address is not specified</span><span style="color:red;"> (426ms)</span>
+    <span style="color:lime;">  ✓</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;"> should throw if amount is 0</span><span style="color:red;"> (594ms)</span>
+
+
+<span style="filter: contrast(70%) brightness(190%);color:lime;"> </span><span style="color:lime;"> 13 passing</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;"> (2s)</span>
+
+--------------------------------------------------------------------
+</pre>
+</body>
+</html>

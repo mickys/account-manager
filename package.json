@@ -1,0 +1,88 @@
+{
+  "name": "account-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/lib/index.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build": "npm run build:lib && npm run build:dec",
+    "build:gulp": "gulp build",
+    "build:lib": "tsc -p .",
+    "build:dec": "scripts/declarations.sh",
+    "coverage": "scripts/run_coverage.sh all",
+    "test": "scripts/run_tests.sh all",
+    "test-single": "scripts/run_tests.sh single",
+    "testToHtml": "scripts/testOutputToHtml.sh"
+  },
+  "nyc": {
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "include": "src",
+    "exclude": [
+      "**/*.d.ts"
+    ],
+    "reporter": [
+      "html",
+      "text"
+    ],
+    "all": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mickys/account-manager.git"
+  },
+  "author": "micky@nowlive.ro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mickys/account-manager/issues"
+  },
+  "homepage": "https://github.com/mickys/account-manager#readme",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "bignumber.js": "^7.2.1",
+    "chai": "^4.2.0",
+    "https": "^1.0.0",
+    "node-binance-api": "^0.9.8",
+    "ts-mocha": "^1.3.0",
+    "typescript": "^2.8.3"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.6",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.11.3",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babelify": "^8.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "browserify": "^16.2.3",
+    "compression-webpack-plugin": "^1.1.12",
+    "cross-env": "^5.2.0",
+    "gulp": "^3.9.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify-es": "^1.0.4",
+    "gulp-util": "^3.0.8",
+    "istanbul": "^0.4.5",
+    "mocha": "^4.1.0",
+    "mocha-loader": "^1.1.3",
+    "mocha-webpack": "^1.0.1",
+    "nyc": "^13.1.0",
+    "safe-buffer": "^5.1.2",
+    "source-map-support": "^0.5.9",
+    "tsify": "^4.0.0",
+    "typescript": "^2.8.3",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "standard": {
+    "env": "mocha",
+    "globals": [
+      "describe",
+      "it"
+    ]
+  }
+}

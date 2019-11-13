@@ -1,0 +1,41 @@
+
+> account-manager@1.0.0 test /Volumes/Dev/accounts/account-manager
+> scripts/run_tests.sh all
+
+
+--------------------------------------------------------------------
+ Running all tests in "test" folder:
+--------------------------------------------------------------------
+
+[0m[0m
+[0m  Core[0m
+[0m    DynamicClass loader[0m
+[0m      getInstance()[0m
+      [32m  ✓[0m[90m should throw if requested class name is not found in store[0m
+
+[0m  Core[0m
+[0m    Manager[0m
+    [32m  ✓[0m[90m importAccount should index the new account[0m
+[0m      getAccounts()[0m
+      [32m  ✓[0m[90m should throw if no module is specified[0m
+      [32m  ✓[0m[90m should return an empty array if specified module exists but has no accounts[0m
+[0m      getAccountsMap()[0m
+      [32m  ✓[0m[90m should return a Map Object[0m
+[0m      getClassMapper()[0m
+      [32m  ✓[0m[90m should return a DynamicClassMapper Object[0m
+
+[0m  Binance[0m
+[0m    import one Binance account[0m
+    [32m  ✓[0m[90m wallet should have 1 account[0m
+    [32m  ✓[0m[90m should create first account with valid class[0m
+    [32m  ✓[0m[90m should create first account with valid class[0m
+[0m    withdraw()[0m
+    [32m  ✓[0m[90m should throw if account does not have specified currency[0m[31m (688ms)[0m
+    [32m  ✓[0m[90m should throw if currency does not exist[0m[31m (645ms)[0m
+    [32m  ✓[0m[90m should throw if address is not specified[0m[31m (426ms)[0m
+    [32m  ✓[0m[90m should throw if amount is 0[0m[31m (594ms)[0m
+
+
+[92m [0m[32m 13 passing[0m[90m (2s)[0m
+
+--------------------------------------------------------------------
